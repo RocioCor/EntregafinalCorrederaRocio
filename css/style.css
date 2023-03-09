@@ -142,7 +142,7 @@ form {
     margin-top: 20PX;
 
 }
-
+/*BEM*/
 .enlace:hover {
     background-color: rgb(97, 5, 188);
     color: rgb(231, 217, 248);
@@ -265,7 +265,16 @@ footer {
         grid-template-rows: 3fr 3fr 6%;
         padding: 0;
     }
-
+    /*BEM EN LINKS*/
+    .enlace:active {
+        background-color: rgb(168, 104, 251);
+        color: rgb(50, 0, 110);
+    }
+    
+    .enlace:active {
+        background-color: rgb(168, 104, 251);
+        color: rgb(50, 0, 110);
+    }
     /*nav*/
     .logo img {
         margin-top: 20px;
