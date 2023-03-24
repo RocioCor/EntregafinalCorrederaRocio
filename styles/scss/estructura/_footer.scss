@@ -1,0 +1,41 @@
+/*footer*/
+footer {
+    height: 20vh;
+    width: 100%;
+    font-size: 15px;
+   @include flex-column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000000;
+    margin: 0vh;
+
+    ul {
+        padding-left: 0px;
+
+        li {
+            display: flex;
+            a{ justify-content: flex-start;
+                img {align-self: flex-start;
+                width: 10vh;
+                height: auto;
+            }}
+
+            p {
+                margin-bottom: 0px;
+                text-align: start;
+                color: aliceblue;
+            }
+        }
+    }
+
+    .whastapp img {
+        display: flex;
+        position: fixed;
+        border-radius: 50%;
+        bottom: 30px;
+        right: 30px;
+        width: 80px;
+        height: 80px;
+    }
+}
+

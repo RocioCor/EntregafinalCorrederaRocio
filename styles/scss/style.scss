@@ -1,0 +1,17 @@
+/*universal*/
+@import "./base/rests.scss";
+/*Estructura*/
+@import"./estructura/mixins";
+@import"./estructura/nav";
+@import"./estructura/footer";
+@import"./estructura/main.scss";
+/*index*/
+@import"./pages/index.scss";
+/*productos y servicios*/
+@import "./pages/productosyservicios.scss";
+/*sobren nosotros*/
+@import"./pages/sobrenosotros.scss";
+/*calidad*/
+@import"./pages/calidad";
+/*responsive*/
+@import "./responsive/mediaquaries.scss";

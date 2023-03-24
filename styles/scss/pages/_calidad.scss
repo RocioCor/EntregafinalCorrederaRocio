@@ -1,0 +1,16 @@
+$borderimg: (
+    colors:rgb(250, 202, 250),
+    bordstyle: solid,
+);
+
+.content{
+    .imgcalidad{
+    img
+        {
+         
+     border-color: map-get($borderimg, colors);
+     border-style: map-get($borderimg , bordstyle );
+      
+    }
+    }
+}

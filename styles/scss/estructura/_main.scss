@@ -1,0 +1,64 @@
+$color-principal:rgb(248, 245, 245);
+$titulos-color:rgb(59, 58, 58);
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: $color-principal;
+    text-shadow: 5px 5px 5px rgba(102, 98, 98, 0.527);
+    text-align: center;
+    background-image: url(https://images.pexels.com/photos/9874642/pexels-photo-9874642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    main{
+        margin:0%;
+         
+        /*TITULO*/
+legend {
+    margin-top: 7%;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    color: $titulos-color;
+    font-size: 60px;
+    border-color: #e5dcee;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom-width: 5%;
+} 
+  /*subtitulos*/
+h2{
+    font-size: 30px;
+}
+      /*IMG*/
+  img{
+    height: 358px;
+width: 358px;
+border-radius: 10%;
+}
+    }/*BEM-ENLACES*/
+.enlace {
+    color: rgb(248, 245, 245);
+    &:active {
+        background-color: rgb(250, 137, 244);
+        color: rgb(247, 213, 235);
+    }
+}
+}
+
+
+
+
+/*SOBRE NOSOTROS*/
+
+
+/*video*/
+#video {
+    height: 400px;
+    width: 780px;
+    border-radius: 1%;
+    margin-top: 20PX;
+}
