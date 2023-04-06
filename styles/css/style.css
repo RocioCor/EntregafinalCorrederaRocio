@@ -259,6 +259,19 @@ section h2 {
   transform: scale(1.15);
 }
 
+/*Contacto*/
+.contact {
+  margin-bottom: 2%;
+}
+
+.map {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.map iframe {
+  margin-top: 2%;
+}
+
 /*responsive*/
 /*ESTRUCTURA GRID*/
 /* GRID sobre nosotros*/
