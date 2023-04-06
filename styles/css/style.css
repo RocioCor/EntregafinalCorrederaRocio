@@ -15,7 +15,7 @@ nav {
   margin-bottom: 40px;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4941176471);
   opacity: 100%;
 }
 nav ul {
@@ -55,6 +55,8 @@ footer {
   margin: 0vh;
 }
 footer ul {
+  margin-top: 3%;
+  margin-bottom: 2%;
   padding-left: 0px;
 }
 footer ul li {
@@ -86,8 +88,8 @@ footer .whastapp img {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 25px;
-  color: rgb(248, 245, 245);
-  text-shadow: 5px 5px 5px rgba(102, 98, 98, 0.527);
+  color: rgb(240, 240, 240);
+  text-shadow: 0px 3px 3px rgb(3, 3, 3);
   text-align: center;
   background-image: url(https://images.pexels.com/photos/9874642/pexels-photo-9874642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
@@ -98,6 +100,7 @@ body {
 }
 body main {
   margin: 0%;
+  background-color: rgba(174, 149, 233, 0.631372549);
   /*TITULO*/
   /*subtitulos*/
   /*IMG*/
@@ -106,17 +109,19 @@ body main legend {
   margin-top: 7%;
   margin-bottom: 15px;
   font-weight: lighter;
-  color: rgb(59, 58, 58);
+  color: rgba(243, 228, 245, 0.966);
   font-size: 60px;
-  border-color: #e5dcee;
+  border-color: rgba(240, 240, 248, 0.8078431373);
   border-style: solid;
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom-width: 5%;
+  border-bottom-width: 5px;
 }
 body main h2 {
   font-size: 30px;
+  color: rgb(240, 240, 240);
+  background-color: rgba(246, 225, 247, 0.4509803922);
 }
 body main img {
   height: 358px;
@@ -145,18 +150,21 @@ body .enlace:active {
 #productos__flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
+  justify-content: space-around;
   text-align: center;
   font-size: 20px;
   color: black;
   text-shadow: none;
-  margin-bottom: 5vh;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 #productos__flex img {
   height: 358px;
   width: 358px;
-  border-radius: 0%;
+  border-radius: 2%;
+  transition: all 20ms;
 }
 #productos__flex h3 {
   border-bottom: #171718;
@@ -165,43 +173,101 @@ body .enlace:active {
   border-top: none;
   border-right: none;
 }
+#productos__flex .card {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#productos__flex .card:hover {
+  transform: scale(1.15);
+}
 
 /*productos y servicios*/
 /*imagenes*/
-.productos3d {
-  margin-top: 5%;
-}
-.productos3d img {
-  height: 30%;
-  width: 50%;
-  border-radius: 20%;
-  border-style: solid;
-}
-
 section h2 {
   margin-top: 3%;
   margin-bottom: 3%;
 }
 
+.productos3d .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.productos3d .slider ul {
+  display: flex;
+  animation: cambio 10s infinite alternate linear;
+  width: 400%;
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -150%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -300%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+.productos3d .slider ul li {
+  width: 100%;
+  height: 50%;
+  list-style: none;
+}
+.productos3d .slider ul li img {
+  width: 60%;
+  height: 100vh;
+}
+.productos3d .slider ul li img:not(#dember) {
+  margin-left: 25%;
+}
+.productos3d .slider ul li img:not(#protesis) {
+  margin-right: 25%;
+}
+
 /*sobren nosotros*/
-.cont img {
+.cuadro img {
   border-radius: 0%;
 }
 
 /*calidad*/
+.content .imgcalidad {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 .content .imgcalidad img {
   border-color: rgb(250, 202, 250);
   border-style: solid;
+  transition: all 300ms;
+}
+.content .imgcalidad img:hover {
+  transform: scale(1.15);
 }
 
 /*responsive*/
 /*ESTRUCTURA GRID*/
 /* GRID sobre nosotros*/
-.cont {
+.cuadro {
   display: grid;
   height: 450px;
   width: 450px;
   margin: 0 auto;
+  margin-bottom: 2%;
   margin-top: 20px;
   grid-template-areas: "imgU imgU" "imgD imgT";
   justify-content: center;
@@ -228,7 +294,7 @@ section h2 {
   width: 225px;
 }
 
-.cont img {
+.cuadro img {
   height: 150px;
   width: 225px;
 }
@@ -368,8 +434,8 @@ section h2 {
   }
   /*foda*/
   .content {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
   .content #video {
     margin-top: 40px;
@@ -378,7 +444,7 @@ section h2 {
     width: 200px;
   }
   /*grilla imagenes foda*/
-  .cont {
+  .cuadro {
     display: grid;
     height: 300px;
     width: 200px;
@@ -426,6 +492,71 @@ section h2 {
     right: 10px;
     width: 15%;
     height: 8%;
+  }
+}
+/* MEDIA QUARIES GRID para menor de 1000px-tablet*/
+@media only screen and (max-width: 1000px) {
+  .mediacontainer {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: auto 2fr auto;
+    grid-template-areas: "nave " "cont" "footer";
+  }
+  /*productos y servicios*/
+  .videoyt #video {
+    width: 100vh;
+    height: 50vh;
+  }
+  .productos3d .slider {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+  }
+  .productos3d .slider ul {
+    display: flex;
+    animation: cambio 10s infinite alternate linear;
+    width: 400%;
+  }
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0;
+    }
+    30% {
+      margin-left: -100%;
+    }
+    45% {
+      margin-left: -150%;
+    }
+    50% {
+      margin-left: -200%;
+    }
+    70% {
+      margin-left: -300%;
+    }
+    75% {
+      margin-left: -300%;
+    }
+    100% {
+      margin-left: -300%;
+    }
+  }
+  .productos3d .slider ul li {
+    width: 100%;
+    height: 50%;
+    list-style: none;
+  }
+  .productos3d .slider ul li img {
+    width: 60%;
+    height: 100vh;
+  }
+  .productos3d .slider ul li img:not(#dember) {
+    margin-left: 25%;
+  }
+  .productos3d .slider ul li img:not(#protesis) {
+    margin-right: 25%;
   }
 }
 

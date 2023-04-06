@@ -1,10 +1,11 @@
 /*ESTRUCTURA GRID*/
 /* GRID sobre nosotros*/
-.cont {
+.cuadro {
     display: grid;
     height: 450px;
     width: 450px;
     margin: 0 auto;
+    margin-bottom: 2%;
     margin-top: 20px;
     grid-template-areas:
         "imgU imgU"
@@ -35,7 +36,7 @@
     width: 225px;
 }
 
-.cont img {
+.cuadro img {
     height: 150px;
     width: 225px;
 }
@@ -206,17 +207,19 @@
             }
         }
     }
+
     /*IMAGENES FODA*/
-    .imgcalidad{
-        img{
+    .imgcalidad {
+        img {
             width: 65%;
             height: 65%;
-        }}
+        }
+    }
 
     /*foda*/
     .content {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
 
         #video {
             margin-top: 40px;
@@ -227,7 +230,7 @@
     }
 
     /*grilla imagenes foda*/
-    .cont {
+    .cuadro {
         display: grid;
         height: 300px;
         width: 200px;
@@ -297,5 +300,94 @@
             height: 8%;
         }
     }
+}
 
+/* MEDIA QUARIES GRID para menor de 1000px-tablet*/
+@media only screen and (max-width: 1000px) {
+    .mediacontainer {
+        display: grid;
+        grid-template-columns: 2fr auto;
+        grid-template-rows: auto 2fr auto;
+        grid-template-areas:
+            "nave "
+            "cont"
+            "footer";
+    }
+
+    /*productos y servicios*/
+    .videoyt {
+        #video {
+            width: 100vh;
+            height: 50vh;
+        }
+    }
+
+    .productos3d {
+        .slider {
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+
+            ul {
+                display: flex;
+                animation: cambio 10s infinite alternate linear;
+                width: 400%;
+
+                @keyframes cambio {
+                    0% {
+                        margin-left: 0;
+                    }
+
+                    20% {
+                        margin-left: 0;
+                    }
+                   
+
+                    30% {
+                        margin-left: -100%;
+                    }
+
+                    45% {
+                        margin-left: -150%;
+                    }
+
+                    50% {
+                        margin-left: -200%;
+                    }
+
+                    70% {
+                        margin-left: -300%
+                    }
+
+                    75% {
+                        margin-left: -300%;
+                    }
+
+                    100% {
+                        margin-left: -300%;
+                    }
+
+
+                }
+
+
+                li {
+                    width: 100%;
+                    height: 50%;
+                    list-style: none;
+
+                    img {
+                        width: 60%;
+                        height: 100vh;
+                        &:not(#dember){
+                            margin-left:25%;
+                        }
+                        &:not(#protesis){
+                            margin-right: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

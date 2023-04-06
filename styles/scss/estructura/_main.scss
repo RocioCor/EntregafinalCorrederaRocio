@@ -1,20 +1,20 @@
-$color-principal:rgb(248, 245, 245);
-$titulos-color:rgb(59, 58, 58);
+$color-principal:rgb(240, 240, 240);
+$titulos-color:rgba(243, 228, 245, 0.966);
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     color: $color-principal;
-    text-shadow: 5px 5px 5px rgba(102, 98, 98, 0.527);
+    text-shadow: 0px 3px 3px rgb(3, 3, 3);
     text-align: center;
+    
     background-image: url(https://images.pexels.com/photos/9874642/pexels-photo-9874642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
     main{
         margin:0%;
-         
+         background-color: #ae95e9a1;
         /*TITULO*/
 legend {
     margin-top: 7%;
@@ -22,16 +22,19 @@ legend {
     font-weight: lighter;
     color: $titulos-color;
     font-size: 60px;
-    border-color: #e5dcee;
+    border-color: #f0f0f8ce;
     border-style: solid;
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom-width: 5%;
+    border-bottom-width: 5px;
 } 
   /*subtitulos*/
 h2{
     font-size: 30px;
+    color:$color-principal;
+    background-color: #f6e1f773;
+    
 }
       /*IMG*/
   img{

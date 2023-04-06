@@ -1,17 +1,24 @@
 /*INDEX-IMAGENES*/
 #productos__flex {
    @include  flex-row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap:wrap;
+    justify-content:center;
+    justify-content: space-around;
     text-align: center;
     font-size: 20px;
     color: black;
    text-shadow: none;
-    margin-bottom: 5vh;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+   
 img{
     height: 358px;
     width: 358px;
-border-radius: 0%;}
+border-radius: 2%;
+transition: all 20ms;
+
+}
     h3{
         border-bottom: #171718;
         border-style: dashed;
@@ -19,4 +26,9 @@ border-radius: 0%;}
         border-top: none;
     border-right: none;
     }
-}
+.card{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    &:hover{
+transform: scale(1.15);
+}}}

@@ -5,11 +5,17 @@ $borderimg: (
 
 .content{
     .imgcalidad{
+        margin-top: 5%;
+        margin-bottom: 5%;
     img
         {
          
      border-color: map-get($borderimg, colors);
      border-style: map-get($borderimg , bordstyle );
+     transition: all 300ms;
+     &:hover{
+transform: scale(1.15);
+     }
       
     }
     }
