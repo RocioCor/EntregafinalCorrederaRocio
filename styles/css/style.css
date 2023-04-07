@@ -42,9 +42,17 @@ nav ul li a {
   height: 8vh;
 }
 
+#menu {
+  display: none;
+}
+
+#menu-check {
+  display: none;
+}
+
 /*footer*/
 footer {
-  height: 20vh;
+  height: 30vh;
   width: 100%;
   font-size: 15px;
   display: flex;
@@ -61,6 +69,7 @@ footer ul {
 }
 footer ul li {
   display: flex;
+  margin-bottom: 0%;
 }
 footer ul li a {
   justify-content: flex-start;
@@ -70,10 +79,18 @@ footer ul li a img {
   width: 10vh;
   height: auto;
 }
-footer ul li p {
+footer ul li a img p {
   margin-bottom: 0px;
   text-align: start;
   color: aliceblue;
+}
+footer #instagram img {
+  width: 3vh;
+  border-radius: 25%;
+}
+footer #gmail img {
+  width: 3vh;
+  border-radius: 25%;
 }
 footer .whastapp img {
   display: flex;
@@ -272,6 +289,10 @@ section h2 {
   margin-top: 2%;
 }
 
+form fieldset input {
+  height: 50px;
+}
+
 /*responsive*/
 /*ESTRUCTURA GRID*/
 /* GRID sobre nosotros*/
@@ -345,10 +366,9 @@ section h2 {
     display: grid;
     background-color: #f0e7f8;
     font-size: 12px;
-    grid-template-areas: "nave cont " "nave cont" "nave footer";
-    grid-template-columns: 0.4fr 1fr;
-    column-gap: 2%;
-    grid-template-rows: 3fr 3fr 6%;
+    grid-template-areas: "nave " "cont" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0 3fr 6%;
     padding: 0;
   }
   /*BEM EN LINKS*/
@@ -358,10 +378,16 @@ section h2 {
   }
   /*nav*/
   .logo img {
-    margin-top: 20px;
     height: 35px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.8705882353);
+  }
+  header .contenedor {
+    display: flex;
+    place-content: space-between;
+  }
+  header a {
+    padding: 0;
   }
   .navUP {
     width: 30%;
@@ -370,15 +396,16 @@ section h2 {
   nav {
     margin-bottom: 0px;
   }
-  nav ul {
+  ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
     margin-left: 0;
     font-size: 15px;
+    margin-top: 60%;
   }
-  nav ul li {
+  ul li {
     margin-bottom: 20%;
     border-bottom: #f0e7f8;
     border-style: groove;
@@ -386,6 +413,69 @@ section h2 {
     border-right: none;
     border-top: none;
     padding-left: 0em;
+  }
+  #menu-check {
+    display: none;
+  }
+  #menu {
+    color: rgb(240, 240, 240);
+    background-color: rgba(174, 149, 233, 0.631372549);
+    font-size: 2em;
+    border-style: solid;
+    border-radius: 20%;
+    border-color: rgb(240, 240, 240);
+    display: flex;
+    position: fixed;
+    left: 0.5em;
+    top: 0.5em;
+    z-index: 9999;
+  }
+  #menu:hover {
+    color: rgba(207, 206, 207, 0.8705882353);
+    background-color: rgba(174, 149, 233, 0.631372549);
+  }
+  #menu-check:not(:checked) ~ nav {
+    display: none;
+  }
+  #menu-check:checked ~ nav {
+    display: block;
+  }
+  #menu-cerrar {
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-abrir {
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-cerrar {
+    display: block;
+    font-size: 30px;
+  }
+  /*productos y servicios*/
+  .productos3d .slider {
+    width: 100%;
+    height: 100%;
+  }
+  .productos3d .slider ul {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .productos3d .slider ul li {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    list-style: none;
+  }
+  .productos3d .slider ul li img {
+    width: 80%;
+    height: 50vh;
+  }
+  .productos3d .slider ul li img:not(#dember) {
+    margin-left: 25%;
+  }
+  .productos3d .slider ul li img:not(#protesis) {
+    margin-right: 25%;
   }
   /*main sobre nosotros - indez*/
   .content legend {
@@ -411,28 +501,30 @@ section h2 {
   }
   form fieldset input {
     margin: 15px;
-    height: 10px;
+    height: 20px;
   }
   .map iframe {
     width: 80%;
     height: 5%;
   }
   /*index imagen sin flex pero con boostrap*/
-  #productos__flex {
+  section #productos__flex {
     display: contents;
+    justify-content: center;
     font-size: 10px;
   }
-  #productos__flex IMG {
+  section #productos__flex IMG {
     height: 30vh;
     width: 18em;
   }
-  #productos__flex .card {
+  section #productos__flex .card {
     color: black;
     padding: 0px;
     height: 60vh;
-    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-bottom: 3%;
   }
-  #productos__flex .card h3 {
+  section #productos__flex .card h3 {
     font-size: 13px;
     border-bottom: #171718;
     border-style: dashed;
@@ -467,7 +559,11 @@ section h2 {
     align-content: center;
     border-color: black;
     border-style: groove;
-    gap: 2px;
+  }
+  .cuadro img {
+    height: 100px;
+    width: 200px;
+    border-radius: 0%;
   }
   .img3, .img2, .img1 {
     height: 100px;
@@ -482,19 +578,24 @@ section h2 {
   .img3 {
     grid-area: imgT;
   }
-  .cont img {
-    height: 100px;
-    width: 200px;
-    border-radius: 0%;
-  }
   /*footer */
   #pie {
     background-color: #171718;
-    margin-top: 10px;
     width: auto;
     height: max-content;
   }
-  #pie li p {
+  #pie ul {
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  #pie ul li {
+    margin-bottom: 0%;
+    border: none;
+  }
+  #pie ul li p {
     font-size: 8px;
   }
   #pie .whastapp img {
@@ -507,8 +608,8 @@ section h2 {
     height: 8%;
   }
 }
-/* MEDIA QUARIES GRID para menor de 1000px-tablet*/
-@media only screen and (max-width: 1000px) {
+/* MEDIA QUARIES GRID para mayor de 600px-tablet*/
+@media only screen and (min-width: 600px) {
   .mediacontainer {
     display: grid;
     grid-template-columns: 2fr auto;

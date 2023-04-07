@@ -1,31 +1,56 @@
 /*footer*/
 footer {
-    height: 20vh;
+    height: 30vh;
     width: 100%;
     font-size: 15px;
-   @include flex-column;
+    @include flex-column;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #000000;
     margin: 0vh;
-    ul {margin-top: 3%;
+
+    ul {
+        margin-top: 3%;
         margin-bottom: 2%;
         padding-left: 0px;
 
         li {
             display: flex;
-            a{ justify-content: flex-start;
-                img {align-self: flex-start;
-                width: 10vh;
-                height: auto;
-            }}
+            margin-bottom: 0%;
 
-            p {
-                margin-bottom: 0px;
-                text-align: start;
-                color: aliceblue;
+
+
+
+            a {
+                justify-content: flex-start;
+
+
+
+                img {
+                    align-self: flex-start;
+                    width: 10vh;
+                    height: auto;
+
+
+                    p {
+                        margin-bottom: 0px;
+                        text-align: start;
+                        color: aliceblue;
+                    }
+                }
             }
         }
+    }
+
+    #instagram img {
+        width: 3vh;
+        border-radius: 25%;
+
+    }
+
+    #gmail img {
+        width: 3vh;
+        border-radius: 25%;
     }
 
     .whastapp img {
@@ -38,4 +63,3 @@ footer {
         height: 80px;
     }
 }
-

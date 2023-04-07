@@ -79,12 +79,11 @@
         background-color: #f0e7f8;
         font-size: 12px;
         grid-template-areas:
-            "nave cont "
-            "nave cont"
-            "nave footer";
-        grid-template-columns: 0.4fr 1fr;
-        column-gap: 2%;
-        grid-template-rows: 3fr 3fr 6%;
+            "nave "
+            "cont"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0 3fr 6%;
         padding: 0;
     }
 
@@ -97,41 +96,135 @@
 
     /*nav*/
     .logo img {
-        margin-top: 20px;
         height: 35px;
         border-radius: 15px;
         background-color: #000000de;
 
     }
 
+    header {
+        .contenedor {
+            display: flex;
+            place-content: space-between;
+        }
+
+        a {
+            padding: 0;
+        }
+    }
+
     .navUP {
+
         width: 30%;
         height: 100%;
+
     }
 
     nav {
         margin-bottom: 0px;
+    }
 
-        ul {
-            @include flex-column;
-            flex-wrap: wrap;
-            align-content: space-between;
-            margin-left: 0;
-            font-size: 15px;
+    ul {
+        @include flex-column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        margin-left: 0;
+        font-size: 15px;
+        margin-top: 60%;
 
-            li {
-                margin-bottom: 20%;
-                border-bottom: #f0e7f8;
-                border-style: groove;
-                border-left: none;
-                border-right: none;
-                border-top: none;
-                padding-left: 0em;
-            }
+        li {
+            margin-bottom: 20%;
+            border-bottom: #f0e7f8;
+            border-style: groove;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            padding-left: 0em;
+        }
 
+    }
+
+    #menu-check {
+        display: none;
+
+    }
+
+    #menu {
+
+        color: $color-principal;
+        background-color: #ae95e9a1;
+        font-size: 2em;
+        border-style: solid;
+        border-radius: 20%;
+        border-color: $color-principal ;
+        display: flex;
+        position: fixed;
+        left: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+
+        &:hover {
+            color: #cfcecfde;
+            background-color: #ae95e9a1;
         }
     }
 
+    #menu-check:not(:checked)~nav {
+        display: none;
+    }
+
+    #menu-check:checked~nav {
+        display: block;
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-cerrar {
+        display: block;
+        font-size: 30px;
+    }
+
+    /*productos y servicios*/
+    .productos3d {
+        .slider {
+            width: 100%;
+            height: 100%;
+
+
+            ul {
+                margin: 0;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                li {
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: 1%;
+                    margin-top: 1%;
+                    list-style: none;
+
+                    img {
+                        width: 80%;
+                        height: 50vh;
+
+                        &:not(#dember) {
+                            margin-left: 25%;
+                        }
+
+                        &:not(#protesis) {
+                            margin-right: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     /*main sobre nosotros - indez*/
 
@@ -167,7 +260,7 @@
 
             input {
                 margin: 15px;
-                height: 10px;
+                height: 20px;
             }
         }
     }
@@ -180,30 +273,33 @@
     }
 
     /*index imagen sin flex pero con boostrap*/
-    #productos__flex {
-        display: contents;
-        font-size: 10px;
+    section {
+        #productos__flex {
+            display: contents;
+            justify-content: center;
+            font-size: 10px;
 
-        IMG {
-            height: 30vh;
-            width: 18em;
+            IMG {
+                height: 30vh;
+                width: 18em;
 
-        }
+            }
 
-        .card {
-            color: black;
-            padding: 0px;
-            height: 60vh;
+            .card {
+                color: black;
+                padding: 0px;
+                height: 60vh;
+margin-left: 25%;
+                margin-bottom: 3%;
 
-            margin-bottom: 5%;
-
-            h3 {
-                font-size: 13px;
-                border-bottom: #171718;
-                border-style: dashed;
-                border-left: none;
-                border-top: none;
-                border-right: none;
+                h3 {
+                    font-size: 13px;
+                    border-bottom: #171718;
+                    border-style: dashed;
+                    border-left: none;
+                    border-top: none;
+                    border-right: none;
+                }
             }
         }
     }
@@ -243,8 +339,11 @@
         align-content: center;
         border-color: black;
         border-style: groove;
-        gap: 2px;
-
+ img {
+        height: 100px;
+        width: 200px;
+        border-radius: 0%;
+    }
     }
 
     %imgfoda {
@@ -269,26 +368,28 @@
         grid-area: imgT;
     }
 
-    .cont img {
-        height: 100px;
-        width: 200px;
-        border-radius: 0%;
-    }
+   
 
     /*footer */
 
 
     #pie {
         background-color: #171718;
-        margin-top: 10px;
         width: auto;
         height: max-content;
+ul{margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 
         li {
+            margin-bottom: 0%;
+            border: none;
             p {
                 font-size: 8px;
             }
-        }
+        }}
 
         .whastapp img {
             display: flex;
@@ -302,8 +403,8 @@
     }
 }
 
-/* MEDIA QUARIES GRID para menor de 1000px-tablet*/
-@media only screen and (max-width: 1000px) {
+/* MEDIA QUARIES GRID para mayor de 600px-tablet*/
+@media only screen and (min-width: 600px) {
     .mediacontainer {
         display: grid;
         grid-template-columns: 2fr auto;
@@ -341,7 +442,7 @@
                     20% {
                         margin-left: 0;
                     }
-                   
+
 
                     30% {
                         margin-left: -100%;
@@ -379,10 +480,12 @@
                     img {
                         width: 60%;
                         height: 100vh;
-                        &:not(#dember){
-                            margin-left:25%;
+
+                        &:not(#dember) {
+                            margin-left: 25%;
                         }
-                        &:not(#protesis){
+
+                        &:not(#protesis) {
                             margin-right: 25%;
                         }
                     }
