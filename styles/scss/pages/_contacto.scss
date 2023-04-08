@@ -10,7 +10,19 @@
 }form{
 fieldset{
     input{
-        height:50px;
+        height:30px;
+    }
+    label{
+        border-bottom: 10%;
+        border-color: black;
+        border-style: double;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+    }
+    div{
+        
+    font-size: 15px;
     }
 }
 }

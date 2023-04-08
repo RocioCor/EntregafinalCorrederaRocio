@@ -52,13 +52,13 @@ nav ul li a {
 
 /*footer*/
 footer {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #000000;
   margin: 0vh;
 }
@@ -69,7 +69,13 @@ footer ul {
 }
 footer ul li {
   display: flex;
-  margin-bottom: 0%;
+  margin-bottom: 0.5%;
+}
+footer ul li p {
+  text-align: start;
+  color: aliceblue;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 footer ul li a {
   justify-content: flex-start;
@@ -78,11 +84,6 @@ footer ul li a img {
   align-self: flex-start;
   width: 10vh;
   height: auto;
-}
-footer ul li a img p {
-  margin-bottom: 0px;
-  text-align: start;
-  color: aliceblue;
 }
 footer #instagram img {
   width: 3vh;
@@ -290,7 +291,18 @@ section h2 {
 }
 
 form fieldset input {
-  height: 50px;
+  height: 30px;
+}
+form fieldset label {
+  border-bottom: 10%;
+  border-color: black;
+  border-style: double;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+form fieldset div {
+  font-size: 15px;
 }
 
 /*responsive*/
@@ -498,10 +510,19 @@ form fieldset input {
     margin-left: 0px;
     width: 30px;
     height: 50%;
+    display: flex;
+    flex-direction: column;
   }
   form fieldset input {
     margin: 15px;
     height: 20px;
+  }
+  form fieldset label {
+    font-size: 15px;
+  }
+  form fieldset div {
+    font-size: 12px;
+    margin-top: 3%;
   }
   .map iframe {
     width: 80%;
@@ -545,8 +566,8 @@ form fieldset input {
   .content #video {
     margin-top: 40px;
     margin-bottom: 40px;
-    height: 155px;
-    width: 200px;
+    height: 200px;
+    width: 300px;
   }
   /*grilla imagenes foda*/
   .cuadro {
@@ -594,9 +615,7 @@ form fieldset input {
   #pie ul li {
     margin-bottom: 0%;
     border: none;
-  }
-  #pie ul li p {
-    font-size: 8px;
+    font-size: 12px;
   }
   #pie .whastapp img {
     display: flex;
@@ -609,7 +628,7 @@ form fieldset input {
   }
 }
 /* MEDIA QUARIES GRID para mayor de 600px-tablet*/
-@media only screen and (min-width: 600px) {
+@media (min-width: 700px) and (orientation: landscape) {
   .mediacontainer {
     display: grid;
     grid-template-columns: 2fr auto;
@@ -671,6 +690,12 @@ form fieldset input {
   }
   .productos3d .slider ul li img:not(#protesis) {
     margin-right: 25%;
+  }
+  footer {
+    height: max-content;
+  }
+  ul li {
+    margin-bottom: 0;
   }
 }
 

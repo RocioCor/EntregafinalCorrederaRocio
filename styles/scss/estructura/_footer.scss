@@ -1,11 +1,11 @@
 /*footer*/
 footer {
-    height: 30vh;
+    height: 40vh;
     width: 100%;
-    font-size: 15px;
+    font-size: 20px;
     @include flex-column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #000000;
     margin: 0vh;
 
@@ -16,27 +16,23 @@ footer {
 
         li {
             display: flex;
-            margin-bottom: 0%;
+            margin-bottom: 0.5%;
+ p {
+                        text-align: start;
+                        color: aliceblue;
+                        margin-top: 0;
+                        margin-bottom: 0;
 
-
-
-
+                    }
             a {
                 justify-content: flex-start;
-
-
 
                 img {
                     align-self: flex-start;
                     width: 10vh;
                     height: auto;
 
-
-                    p {
-                        margin-bottom: 0px;
-                        text-align: start;
-                        color: aliceblue;
-                    }
+                   
                 }
             }
         }
